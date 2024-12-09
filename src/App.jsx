@@ -30,31 +30,92 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1 className="font-bold">chat online</h1>
+      <header className="flex justify-center items-center">
+        <h1 className="from-neutral-700">chat online</h1>
       </header>
-
-      {/* Pooooooofiusessssssssssssssssssssss body che anyie?????????????????? */}
-      {/* ye taghir to message hat dadam ye sender behesh ezafe kardam ba ien mitoni class css bdi va payame khodet ro az payam ion joda koni */}
-      <body></body>
-
-      <main>
-        {/* {message.map((msg, index) => (
-          <p key={index}>
-            <strong>{new Date(msg.timestamp).toLocaleTimeString()}</strong>:{" "}
-            {msg.text}
+      <main className="container p-4 ">
+        <div className="border border-solid rounded h-96 overflow-y-scroll">
+          {/* {messages.map((msg, index) => (
+            <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent" key={index}>
+              <strong>{new Date(msg.timestamp).toLocaleTimeString()}</strong>:{" "}
+              {msg.text}
+            </p>
+          ))} */}
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam illo
+            labore ratione accusantium tempore placeat harum ab saepe aliquam
+            eligendi impedit at itaque eveniet exercitationem, laboriosam a quis
+            facilis sunt quidem eaque libero sed? Asperiores nesciunt temporibus
+            doloribus voluptatem iste, itaque est possimus minima voluptatum
+            maxime dolores natus sit impedit!
           </p>
-        ))} */}
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+          <p className="border m-4 border-solid px-6 py-2 h-auto w-3/4 border-transparent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+            corrupti.
+          </p>
+        </div>
       </main>
       <footer>
-        <input
-          type="text"
-          name=""
-          id=""
-          value={messageInput}
-          onChange={(e) => setMessageInput(e.target.value)}
-        />
-        <button onClick={sendMessage}>send</button>
+        <form className="flex justify-center items-center">
+          <input
+            className="border w-3/4 p-2 rounded-lg"
+            type="text"
+            name=""
+            id=""
+            value={messageInput}
+            onChange={(e) => setMessageInput(e.target.value)}
+          />
+          <button
+            className="border bg-blue-500 m-2 border-solid p-2 rounded-lg"
+            onClick={sendMessage}
+          >
+            send
+          </button>
+        </form>
       </footer>
     </>
   );
