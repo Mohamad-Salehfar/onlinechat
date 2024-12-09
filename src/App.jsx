@@ -5,19 +5,24 @@ import { useDispatch, useSelector } from "react-redux";
 import { updated } from "./feature/chatSlice";
 function App() {
   const [messageInput, setMessageInput] = useState("");
-  const message = useSelector((state) => state.chat.message);
+  const messages = useSelector((state) => state.chat.message);
   const dispatch = useDispatch();
 
+  console.log(messages);
   useEffect(() => {
-    socket.on("chatMessage", (message) => {
+    socket.on("recive-message", (message) => {
       dispatch(updated(message));
     });
   }, [dispatch]);
 
   const sendMessage = () => {
     if (messageInput.trim()) {
-      const message = { text: messageInput, timeStamp: Date.now() };
-      socket.emit("chatMessage", message);
+      const message = {
+        text: messageInput,
+        timeStamp: Date.now(),
+        isSender: true,
+      };
+      socket.emit("send-message", message);
       dispatch(updated(message));
       setMessageInput("");
     }
@@ -28,14 +33,19 @@ function App() {
       <header>
         <h1 className="font-bold">chat online</h1>
       </header>
-      <body>
-        {message.map((msg, index) => (
+
+      {/* Pooooooofiusessssssssssssssssssssss body che anyie?????????????????? */}
+      {/* ye taghir to message hat dadam ye sender behesh ezafe kardam ba ien mitoni class css bdi va payame khodet ro az payam ion joda koni */}
+      <body></body>
+
+      <main>
+        {/* {message.map((msg, index) => (
           <p key={index}>
             <strong>{new Date(msg.timestamp).toLocaleTimeString()}</strong>:{" "}
             {msg.text}
           </p>
-        ))}
-      </body>
+        ))} */}
+      </main>
       <footer>
         <input
           type="text"
