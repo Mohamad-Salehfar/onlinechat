@@ -5,10 +5,12 @@ import { Server } from "socket.io";
 
 const app = express();
 const server = createServer(app);
+
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: ["http://localhost:5173"],
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
@@ -16,7 +18,7 @@ io.on("connection", (socket) => {
   console.log(`a user connected with socket id: ${socket.id}`);
 
   socket.on("send-message", (message) => {
-    socket.broadcast.emit("recive-message", { message, isSender: false });
+    socket.broadcast.emit("recive-message", { ...message, isSender: false });
   });
 });
 

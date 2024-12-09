@@ -9,7 +9,6 @@ const chatSlice = createSlice({
   initialState,
   reducers: {
     updated: (state, action) => {
-      console.log(action.payload);
       state.message.push(action.payload);
     },
   },

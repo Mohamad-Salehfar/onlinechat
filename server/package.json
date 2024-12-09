@@ -1,19 +1,13 @@
 {
   "name": "server",
-  "module": "app.ts",
+  "version": "1.0.0",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "bun --watch app.ts"
+    "dev": "nodemon app.js"
   },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@types/express": "^5.0.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "express": "^4.21.2",
-    "socket.io": "^4.8.1"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
