@@ -20,6 +20,14 @@ io.on("connection", (socket) => {
   socket.on("send-message", (message) => {
     socket.broadcast.emit("recive-message", { ...message, isSender: false });
   });
+
+  socket.on("delete-message", (id) => {
+    socket.broadcast.emit("delete-message-form-others", id);
+  });
+
+  socket.on("get-username", (username) => {
+    socket.broadcast.emit("send-username", username);
+  });
 });
 
 server.listen(3000, () => {
