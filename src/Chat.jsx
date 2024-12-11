@@ -22,7 +22,7 @@ function Chat() {
       dispatch(updated(message));
     });
 
-    socket.on("delete-message-form-others", (messageId) => {
+    socket.on("delete-message-from-others", (messageId) => {
       dispatch(messageId);
     });
 
