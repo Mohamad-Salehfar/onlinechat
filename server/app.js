@@ -22,7 +22,7 @@ io.on("connection", (socket) => {
   });
 
   socket.on("delete-message", (id) => {
-    socket.broadcast.emit("delete-message-form-others", id);
+    socket.broadcast.emit("delete-message-from-others", id);
   });
 
   socket.on("get-username", (username) => {
